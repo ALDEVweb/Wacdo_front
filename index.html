@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Composez votre commande - Choix de menus et produits Wacdo</title>
+    <meta name="description" content="Sur place ou à emporter, sélectionnez burgers, menus, boissons et plus. Ajoutez vos articles au panier et personnalisez votre commande facilement.">
+    <link rel="stylesheet" href="css/fraldev-bundle.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon/favicon-32x32.png">
+</head>
+<body class="txt-one pos-rel">
+    <main class="flex pos-rel w100">
+        <!-- pop-up pour les options -->
+        <div id="pop-up" class="w100">
+            <!-- bannière -->
+            <div id="banniere" class="w100"><img src="assets/images/mc_landing_banner.png" alt="Bannière Wacdo avec logo et burger géant"></div>
+            <!-- accueil -->
+            <!-- accueil -->
+            <div id="accueil" class="flex p32 round16 gap64 large-5 medium-10 small-10 back-one shadow">
+                <p class="fw700 fs42">Bonjour,</p>
+                <p class="fw700 fs26">Souhaitez-vous consommer votre menu sur place ou préférez-vous l'emporter ?</p>
+                <!-- choix sur place / à emporter -->
+                <div id="contain-choix-sp-ae" class="flex j-between w100 gap32">
+                    <div id="bouton-restaurant" class="choix-sp-ae flex j-center a-center round8 large-5 gap8 back-one">
+                        <div class="w100 flex j-center"><img src="assets/images/illustration-sur-place.png" alt="Table avec deux chaises"></div>
+                        <p class="fw700 fs26">Sur Place</p>
+                    </div>
+                    <div id="bouton-emporter" class="choix-sp-ae flex j-center a-center round8 large-5 gap8 back-one">
+                        <div class="w100 flex j-center"><img src="assets/images/illustration-a-emporter.png" alt="Sachet papier à emporter Wacdo"></div>
+                        <p class="fw700 fs26">A Emporter</p>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        <div id="pop-option" class="w100 flex j-center a-center d-none">
+
+            <!-- intégration dynamique des options -->
+
+        </div>
+        <!-- contenu principal : creation cmd -->
+        <div id="creation-cmd" class="large-9 pos-rel">
+            <div class="sticky back-one">
+                <!-- contain slider -->
+                <div id="contain-slider" class="w100 flex a-center j-between pos-rel">
+                    <button id="button-prev" class="b-none"><img src="assets/images/fleche-slider.png" alt="flèche précédent"></button>
+                    <!-- wrapper -->
+                    <div id="slider-wrapper" class="flex a-center">
+                        <!-- slider -->
+                        <div id="slider" class="flex gap16">
+                            
+                            <!-- Slides intégration dynamique-->
+                            
+                        </div>
+                    </div>
+                    <button id="button-next" class="b-none"><img src="assets/images/fleche-slider.png" alt="flèche suivant"></button>
+                </div>
+                <!-- description catégorie -->
+                <div id="description-cat" class="back-one"></div>
+            </div>
+            <!-- liste produit de la catégorie -->
+            <div id="contain-liste-produits">
+                <div id="liste-produits" class="flex gap16"></div>
+            </div>
+        </div>
+        <!-- recap commande -->
+        <aside id="recap-cmd" class="large-3 p32 back-two">
+            <div id="aside-haut" class="w100 flex j-between a-center">
+                <!-- logo -->
+                <div class="logo flex a-center j-center w100"><img src="assets/images/logo.png" alt="logo de Wacdo"></div>
+                <!-- info commande -->
+                <div id="info-cmd" class="w100 flex j-between a-center ">
+                    <div>
+                        <p class="fs14 fw400">Commande numéro</p>
+                        <!-- consommation dynamique -->
+                         <div class="flex mt8">
+                            <p id="type-conso" class="fs14 fw400">Sur place: </p>
+                            <p id="num-conso" class="fs14 fw700">326</p>
+                         </div>
+                    </div>
+                    <div>
+                        <!-- numéro de commande dynamique -->
+                        <p id="num-cmd" class="fs42 fw400">72</p>
+                    </div>
+                </div>
+            </div>
+            <!-- detail commande -->
+            <div id="contain-detail-cmd">
+                <div id="detail-cmd" class="flex gap16">
+
+                    <!-- géré dynamiquement -->
+                    
+                </div>
+            </div>
+            <!-- aside bas -->
+             <div id="contain-aside-bas" class="large-3">
+                <div id="aside-bas" class="w100 flex j-between a-center">
+                    <!-- total cmd -->
+                    <div id="total-cmd" class="flex j-between a-center w100">
+                        <div>
+                            <p class="fs22 fw400">TOTAL</p>
+                            <p class="fs22 fw400">(ttc)</p>
+                        </div>
+                        <div id="px-cmd" class="fs42 fw400">0,00€</div>
+                    </div>
+                    <!-- action payer annuler -->
+                    <div id="action-panier" class="flex j-between a-center w100">
+                        <button id="togglePanier" class="b-none back-one fs16 fw400">Voir le panier</button>
+                        <button id="abandon" class="button fs16 fw400 round8">Abandon</button>
+                        <button id="payer" class="button back-yellow fs18 fw700 round8 b-none">Payer</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <script src="js/popup.js" defer></script>
+    <script src="js/app.js" defer></script>
+</body>
+</html>
+

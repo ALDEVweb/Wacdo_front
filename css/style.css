@@ -1,0 +1,524 @@
+/* root à adapter en data-thepme si nécessaire */
+:root { 
+    --gutter: 16px;                                                                   /* Nécessaire aux largeurs */
+    --back-one : white;                                                           /* Nécessaire pour utilisé sans les -- de la variable */
+    --back-two : #F1F1F1;                                                           /* Nécessaire pour utilisé sans les -- de la variable */
+    --back-three : #D6D6D6;                                                         /* Nécessaire pour utilisé sans les -- de la variable */     
+    --txt-one : #292929;
+    --txt-two : #6E6E6E;
+    --txt-three : #FFC836;                                                           /* Nécessaire pour utilisé sans les -- de la variable */
+}
+
+/* si switch access utilisé *//*
+[data-style="normal"]{*/
+    /* Déclarez ici les variables pour les différents font-family */ 
+/*    --access : url("../assets/picto/access-black.png");
+}
+[data-style="access"]{*/
+    /* Remplacez ici tout les font-family par "Luciole" */
+    /* Luciole existe en Bold et Regular seulement */
+/*    --access : url("../assets/picto/access-blue.png");
+}*/
+
+
+/*** GENERAL ***/
+.panier-affiche{z-index: -1 !important;}
+.sticky {
+    position: sticky;
+    top: 0;
+}
+.back-yellow { background-color: var(--txt-three)}
+.fs14 { font-size: 14px; }
+.fs18 { font-size: 18px; }
+.fs20 { font-size: 20px; }
+.fs26 { font-size: 26px; }
+.fs28 { font-size: 28px; }
+.fs40 { font-size: 40px; }
+.fs42 { font-size: 42px; }
+.fs48 { font-size: 48px; }
+.fs96 { font-size: 96px; }
+body, main, #pop-up, #contain-finalisation, #pop-option { height: 100vh; }
+.shadow { box-shadow: 4px 4px 12px var(--back-three); }
+.button { 
+    padding: 16px 32px;
+    border: 1px solid var(--txt-one)
+}
+.souligne {
+    border-bottom: 15px solid var(--back-three);
+    width: 120px;
+}
+.no-button{
+}
+
+/* Pop */
+#pop-up, #pop-option {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+#pop-up { background-color: var(--back-one); }
+#pop-option{background-color: rgba(0, 0, 0, 0.204);}
+#quantite { padding: 64px; position: relative;}
+#ajuste-qte { 
+    box-shadow: 4px 4px 8px var(--back-three); 
+    width: 283px;
+    height: 76px;
+}
+#overflow-img-pop{
+    overflow: auto;
+    scrollbar-width: none;
+}
+#contain-img-pop-option {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.img-pop-option {
+    width: 285px;
+    height: 200px;
+    border: 1px solid var(--txt-two);
+}
+.img-pop-option img {
+    width: 129px;
+    height: auto;
+    object-fit: cover;
+}
+.choix-normal img{width: 99px;}
+.picto{
+    width: 32px;
+    height: 32px;
+}
+.picto img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+#picto-close{
+    position: absolute;
+    top: 32px;
+    right: 32px;
+}
+#retour{
+    position: absolute;
+    top: 32px;
+    left: 32px;
+}
+.picto-trash{
+    width: 24px;
+    height: 24px;
+}
+.picto-trash img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Bannière */
+#banniere {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+#banniere img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: top;
+}
+
+
+/*** INDEX ***/
+/* accueil */
+#accueil, #finalisation, #remerciements { position: relative; }
+#accueil {
+    top: 25vh;
+    left: 20%;
+}
+.choix-sp-ae{
+    padding: 32px 0;
+    border: 8px solid #FFC836;
+    min-width: 220px;
+}
+.choix-sp-ae img {
+    height: 96px;
+    width: auto;
+    object-fit: cover;
+}
+
+
+/*** COMMANDE ***/
+#creation-cmd { 
+    padding: 0 32px;
+    background-color: var(--back-one);
+}
+
+/* slider */
+#contain-slider {padding: 32px 0;}
+#button-prev, #button-next { 
+    width: 60px;
+    height: 120px;
+    background-color: white;
+}
+#button-prev img, #button-next img {
+    width: 100%;
+    height: auto;
+    
+}
+#button-next {
+    transform: rotate(180deg);
+}
+#slider-wrapper {
+    width: calc(100% - 120px);
+    overflow: auto;
+    scrollbar-width: none;
+}
+#slider { 
+    transition: transform 0.3s ease;
+    flex-wrap: nowrap;
+}
+.slide {
+    width: 120px;
+    height: 120px;
+    border: 1px solid var(--txt-two)
+}
+.imageCat{
+    width: 75px;
+    height: 75px;
+}
+.imageCat img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.select{
+    border: 4px solid var(--txt-three)
+}
+
+/* detail catégorie */
+#description-cat, #liste-produits { padding: 0 60px; }
+#description-cat {padding-bottom: 16px;}
+#liste-produits {padding-top: 16px;}
+.produit {
+    width: 200px;
+    border: 1px solid var(--txt-two);
+    padding: 0 8px 16px 8px;
+}
+.produitImg { height: 200px; }
+.produitImg img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+}
+
+/* recap cmd */
+#recap-cmd{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+}
+/* aside haut */
+#aside-haut{ 
+    height: 150px;
+    align-content: space-between;
+}
+.logo{ padding-top: 16px;}
+.logo img {
+    width: 32px;
+    height: auto;
+    object-fit: cover;
+}
+#info-cmd {
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--txt-one);
+}
+
+/* detail cmd */
+#contain-detail-cmd { 
+    padding: 16px 0;
+    height: calc(100vh - 410px);
+    overflow-y: auto;
+    scrollbar-width: none; 
+}
+
+
+/* aside bas */
+#contain-aside-bas{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 0 32px 32px 32px;
+}
+#aside-bas{
+    height: 200px;
+    align-content: space-between;
+    border-top: 1px solid var(--txt-two);
+    padding-top: 32px;
+}
+
+/*** Finalisation ***/
+.img-finish img{
+    height: auto;
+    object-fit: cover;
+    /* box-shadow: 4px 4px 12px var(--back-three);  image manquante dans les assets et impossible de récupérer seulement l'image, intégration de la div complpète récupéré sur la plaquette figma*/
+}
+
+
+/*** REMERCIEMENTS ***/
+#remerciements{ 
+    left: 10%;
+    top: 30vh;
+}
+.contain-new-cmd {
+    position: absolute;
+    bottom: 5vh;
+}
+#togglePanier{ display: none;}
+
+/*** RESPONSIVE ***/
+/* Smartphone */
+@media screen and (max-width: 699px) {
+    /* Général */
+    .fs96 { font-size: 48px; }
+    .fs48 { font-size: 34px; }
+    .fs42 { font-size: 30px; }
+    .fs40 { font-size: 28px; }
+    .fs28 { font-size: 20px; }
+    .fs26 { font-size: 18px; }
+    .fs20 { font-size: 18px; }
+    .fs18 { font-size: 14px; }
+    .fs14 { font-size: 14px; }
+    
+    /*** INDEX ***/
+    
+    #accueil, #finalisation {
+        gap: 32px;
+        padding: 16px;
+    }
+    #contain-choix-sp-ae{ justify-content: center; }
+    .choix-sp-ae img { height: 48px; }
+    /*** INDEX - REMERCIEMENTS ***/
+    
+    /*** REMERCIEMENTS ***/
+    /*** FINALISATION ***/
+    .button { padding: 8px 16px; }
+    .souligne {
+        border-bottom: 8px solid var(--back-three);
+        width: 70px;
+    }
+    #pop-up {
+        padding-top: 18vh;
+    }
+    #recap-cmd{
+        padding: 16px;
+    }
+    #aside-haut{ 
+        height: 60px;
+    }
+    #info-cmd{width: 65%;}
+    #contain-aside-bas{
+        padding: 0 16px 16px 16px;
+    }
+    #aside-bas{
+        height: 110px;
+        padding-top: 16px;
+    }
+    #contain-detail-cmd, #creation-cmd{
+        height: calc(100vh - 220px);
+    }
+    #creation-cmd{
+        margin-top: 76px;
+        padding: 0 16px;
+    }
+    .sticky{
+        top: 76px;
+    }
+    #button-prev, #button-next {
+        width: 30px;
+        height: 60px;
+    }
+    .slide {
+        width: 60px;
+        height: 60px;
+    }
+    .imageCat {
+        width: 35px;
+        height: 35px;
+    }
+    #slider {gap: 8px;}
+    #slider-wrapper {
+        width: calc(100% - 60px);
+    }
+    #contain-slider{
+        padding: 16px 0;
+    }
+    #description-cat, #liste-produits{
+        padding: 0 30px;
+    }
+    #description-cat p{ margin-top: 8px;}
+    #liste-produits {
+        gap: 8px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    .produit{
+        width: 120px;
+    }
+    .produitImg{ height: 110px;}
+    .produitImg img {
+        width: 80px;
+        height: 80px;
+    }
+    #contain-liste-produits{height: calc(100vh - 384px);}
+    #pop-option>div{
+        width: 90%;
+        padding: 60px 16px 16px 16px;
+    }
+    #picto-close{
+        top: 8px;
+        right: 8px;
+        width: 24px;
+        height: 24px;
+    }
+    #overflow-img-pop{
+        width: 100%;
+    }
+    #contain-img-pop-option{gap: 8px;}
+    .img-pop-option{
+        width: 120px;
+        height: 150px;
+    }
+    .img-pop-option img {
+        width: 90px;
+    }
+    .choix-normal img{width: 80px;}
+    #retour{
+        top: 8px;
+        left: 8px;
+    }
+    #ajuste-qte{
+        height: 48px;
+        border-radius: 8px;
+    }
+}
+/* Tablettes */
+@media screen and (min-width: 700px) and (max-width: 1024px) {
+    /*** INDEX ***/
+    /*** REMERCIEMENTS ***/
+    /*** FINALISATION ***/
+    #finalisation {
+        gap: 32px;
+        padding: 16px;
+    }
+    .souligne {
+        border-bottom: 12px solid var(--back-three);
+        width: 90px;
+    }
+    .fs96 { font-size: 64px; }
+    #pop-up {
+        padding-top: 25vh;
+    }
+    #recap-cmd{
+        padding: 32px;
+    }
+    #aside-haut{ 
+        height: 80px;
+    }
+    #info-cmd{width: 40%;}
+    #contain-aside-bas{
+        padding: 0 32px 32px 32px;
+    }
+    #aside-bas{height: 100px;}
+    #total-cmd{width: 200px; padding: 0;}
+    #action-panier{width: 400px;}
+    
+    #contain-detail-cmd, #creation-cmd{
+        height: calc(100vh - 244px);
+    }
+    #creation-cmd{
+        margin-top: 112px;
+    }
+    .sticky{
+        top: 112px;
+    }
+    #liste-produits {
+        padding-bottom: 16px;
+    }
+    .produit{
+        width: 180px;
+    }
+    .produitImg{ height: 180px;}
+    .produitImg img {
+        width: 120px;
+        height: 120px;
+    }
+    #contain-liste-produits{height: calc(100vh - 525px);}
+    #pop-option>div{
+        width: 80%;
+        padding: 80px 32px 32px 32px;
+    }
+    #picto-close{
+        top: 16px;
+        right: 16px;
+    }
+    #retour{
+        top: 16px;
+        left: 16px;
+    }
+
+}
+/* Communs */
+@media screen and (max-width: 1024px) {
+    /*** INDEX - REMERCIEMENTS ***/
+    #pop-up{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    #accueil, #remerciements { margin-left: 0; position: initial;}
+    .contain-new-cmd { position: initial;}
+    #contain-finalisation { height: fit-content;}
+    #recap-cmd{
+        background-color: var(--back-one);
+        width: 100%;
+    }
+    #aside-haut{ 
+        border-bottom: 1px solid var(--txt-two);
+    }
+    .logo{
+        width: 20%;
+        padding: 0;
+    }
+    #info-cmd{
+        padding: 0;
+        border: none;
+    }
+    #contain-aside-bas{
+        width: 100%;
+    }
+
+    #creation-cmd {
+        width: 100%;
+        z-index: 1;
+    }
+    #contain-liste-produits{
+        overflow-y: auto;
+        scrollbar-width: none;
+    }
+    #liste-produits {
+        justify-content: center;
+    }
+    .select{
+        border: 2px solid var(--txt-three);
+    }
+    #togglePanier{
+        display: block;
+    }
+    
+    #annule-qte{ margin-right: 0;}
+    #action-option{width: 80%; gap: 8px;}
+}
