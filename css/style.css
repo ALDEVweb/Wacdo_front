@@ -66,8 +66,8 @@ body, main, #pop-up, #contain-finalisation, #pop-option { height: 100vh; }
     height: 76px;
 }
 #overflow-img-pop{
-    overflow: auto;
-    scrollbar-width: none;
+    overflow-x: auto;
+    scrollbar-width: thin;
 }
 #contain-img-pop-option {
     display: flex;
@@ -521,4 +521,9 @@ body, main, #pop-up, #contain-finalisation, #pop-option { height: 100vh; }
     
     #annule-qte{ margin-right: 0;}
     #action-option{width: 80%; gap: 8px;}
+
+    #overflow-img-pop{
+        scrollbar-width: none;
+    }
+    
 }
