@@ -48,7 +48,7 @@ function afficheListCat(categories){
 // récupération des catégorie et affichage dans le slider
 function recupCategorie(){
     //fetch('json/categories.json')
-    fetch('http://wacdo-back.aldev-web.fr/index.php?controleur=api/retourner_categories_json')
+    fetch('https://wacdo-back.aldev-web.fr/index.php?controleur=api/retourner_categories_json')
     .then(response => response.json())
     .then(data => {
         afficheListCat(data);
@@ -86,7 +86,7 @@ function selectSlide(slide){
 // parametre : slides = la liste des slides du slider
 function ecouteClickSlideCat(slides){
     //fetch('json/produits.json')
-    fetch('http://wacdo-back.aldev-web.fr/index.php?controleur=api/retourner_produits_json')
+    fetch('https://wacdo-back.aldev-web.fr/index.php?controleur=api/retourner_produits_json')
     .then(response => response.json())
     .then(data => {
         // initialisation de l'affichage sur menu
@@ -288,7 +288,7 @@ function actionSurProduit(cat, prodId) {
     initArticle(cat, prodId);
     // on récupère les produits
     // fetch(`json/produits.json`)
-    fetch('http://wacdo-back.aldev-web.fr/index.php?controleur=api/retourner_produits_json')
+    fetch('https://wacdo-back.aldev-web.fr/index.php?controleur=api/retourner_produits_json')
     .then(response => response.json())
     .then(data => {
         // on cherche le produit qui a l'id prodId dans la catégorie cat
@@ -567,7 +567,7 @@ let panier = {
 // initialisation du panier
 // parametre : conso = le type de consommation sélectionné
 function initPanier(conso){
-    fetch(`http://wacdo-back.aldev-web.fr/index.php?controleur=api/creer_cde&consommation=${conso}`)
+    fetch(`https://wacdo-back.aldev-web.fr/index.php?controleur=api/creer_cde&consommation=${conso}`)
     .then(response => response.json())
     .then(data => {
         // let nbrCde = genererNum();
@@ -741,7 +741,7 @@ function affichePanier(){
     
     // on récupère la liste de tout les produits
     //fetch('json/produits.json')
-    fetch('http://wacdo-back.aldev-web.fr/index.php?controleur=api/retourner_produits_json')
+    fetch('https://wacdo-back.aldev-web.fr/index.php?controleur=api/retourner_produits_json')
     .then(response => response.json())
     .then(data => {
         // on récupère l'élément de l'affichage du panier
@@ -838,7 +838,7 @@ function enregistrerCommande() {
 function envoiCommande() {
     console.log("envoi du panier", panier);
     // on envoie la commande à l'API
-    fetch('http://wacdo-back.aldev-web.fr/index.php?controleur=api/enregistrer_cde', {
+    fetch('https://wacdo-back.aldev-web.fr/index.php?controleur=api/enregistrer_cde', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
